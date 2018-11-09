@@ -9,6 +9,7 @@ class App extends Component {
   render() {
     return (
       <section className="App">
+        <Form />
         {this.todoList.map(todoItem => (
           <Todo todoItem={todoItem} />
         ))}
