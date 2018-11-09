@@ -1,28 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Form from './Form'
+import Todo from './Todo'
+import './App.css'
 
 class App extends Component {
+  todoList = ['Aufgabe1', 'Aufgabe2', 'Aufgabe3']
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      <section className="App">
+        {this.todoList.map(todoItem => (
+          <Todo todoItem={todoItem} />
+        ))}
+      </section>
+    )
   }
 }
 
-export default App;
+export default App
